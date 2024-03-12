@@ -20,13 +20,31 @@ class Regalos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regalos)
         var option : String? = intent.getStringExtra("menuType")
-
+        var titulo : TextView = findViewById(R.id.titulo)
+        when(option){
+            "Detalles"-> {
+                titulo.setText("Detalles")
+            }
+            "Regalos"-> {
+                titulo.setText("Regalos")
+            }
+            "Globos"-> {
+                titulo.setText("Globos")
+            }
+            "Peluches"-> {
+                titulo.setText("Peluches")
+            }
+            "Tazas"-> {
+                titulo.setText("Tazas")
+            }
+        }
+        adapter = RegaloAdapter(this, regalos)
         var gridDetalles: GridView = findViewById(R.id.regalos_catalogo)
-        gridDetalles
+        gridDetalles.adapter = adapter
         cargarDetalles(option)
     }
 
-    fun cargarDetalles(option){
+    fun cargarDetalles(option: String?){
         when(option){
             "Regalos" -> {
                 regalos.add(Detalles(R.drawable.regalos, "3.99"))
@@ -93,9 +111,9 @@ class Regalos : AppCompatActivity() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             var detalle = detalles[position]
             var inflator = contexto!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            var vista = inflator.inflate(R.layout.detalle_regalos, null)
-            var image: ImageView = vista.findViewById<ImageView>(R.id.iv_img_regalo)
-            var precio: TextView = vista.findViewById(R.id.tv_regalo_precio)
+            var vista = inflator.inflate(R.layout.regalos, null)
+            var image: ImageView = vista.findViewById<ImageView>(R.id.image_regalo_cell)
+            var precio: TextView = vista.findViewById(R.id.regalo_price_cell)
 
             image.setImageResource(detalle.image)
             precio.setText(detalle.precio)
