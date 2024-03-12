@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        android:src="@drawable/happybox"/>
+
+    <Button
+        android:id="@+id/btn_detalles"
+        android:layout_marginTop="25dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Detalles"
+        android:textSize="30sp"
+        android:color="@color/boton" />
+
+    <Button
+        android:id="@+id/btn_globos"
+        android:layout_marginTop="25dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Globos"
+        android:textSize="30sp"
+        android:color="@color/boton" />
+
+    <Button
+        android:id="@+id/btn_peluches"
+        android:layout_marginTop="25dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Peluches"
+        android:textSize="30sp"
+        android:color="@color/boton" />
+
+    <Button
+        android:id="@+id/btn_regalos"
+        android:layout_marginTop="25dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Regalos"
+        android:textSize="30sp"
+        android:color="@color/boton" />
+
+    <Button
+        android:id="@+id/btn_tazas"
+        android:layout_marginTop="25dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Tazas"
+        android:textSize="30sp"
+        android:color="@color/boton" />
+
+</LinearLayout>
